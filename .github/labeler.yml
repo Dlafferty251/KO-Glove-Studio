@@ -1,0 +1,21 @@
+frontend:
+  - 'src/components/**'
+  - '**/*.tsx'
+  - '**/*.jsx'
+
+backend:
+  - 'src/lib/**'
+  - '**/*.ts'
+
+styles:
+  - '**/*.css'
+  - '**/*.scss'
+
+docs:
+  - 'docs/**'
+  - '**/*.md'
+
+config:
+  - '.github/**'
+  - '**/*.yml'
+  - '**/*.yaml'
