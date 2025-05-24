@@ -1,0 +1,59 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--red);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid var(--gold);
+}
+
+.scrolled {
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--gold);
+  text-decoration: none;
+  transition: font-size 0.3s ease;
+}
+
+.links a {
+  margin-left: 2rem;
+  color: var(--cream);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--gold);
+}
+
+.scrolled .logo {
+  font-size: 1.1rem;
+}
+
+.logo img {
+  border-radius: 50%;
+  object-fit: cover;
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
+  border: 2px solid var(--gold);
+}
+
+.scrolled .logo img {
+  width: 36px !important;
+  height: 36px !important;
+}
