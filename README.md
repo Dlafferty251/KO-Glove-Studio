@@ -1,91 +1,36 @@
-# 🥊 KO Glove Studio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-**KO Glove Studio** is a slick web app that lets users design their own custom boxing gloves and purchase them using a smooth checkout flow powered by the Square Payment API.
+## Getting Started
 
-Perfect for fighters, fans, or anyone who wants to throw hands in style — KO Glove Studio puts the design power right in your corner.
+First, run the development server:
 
----
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## 🚀 Features
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- 🎨 Interactive glove customization (color, size, logo)
-- 🛒 Cart system to manage custom orders
-- 💳 Seamless payment flow using Square API
-- ⚡ Built with React, Next.js, and TypeScript
-- 📱 Mobile-responsive and deployment-ready
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🛠️ Tech Stack
+## Learn More
 
-- **Frontend:** React + Next.js + TypeScript
-- **Styling:** CSS Modules (or SCSS)
-- **State Management:** React Context (or Zustand if scaling)
-- **Payments:** [Square Web Payments SDK](https://developer.squareup.com/docs/web-payments/overview)
-- **Deployment:** Vercel
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 🗺️ Roadmap (1-Week Sprint)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-### 🔥 Day 1: Project Kickoff
-- [x] Create GitHub repo: `ko-glove-studio`
-- [x] Set up Next.js + TypeScript project
-- [x] Install base dependencies
-- [x] Configure CSS Modules or SCSS
-- [x] Create a basic landing page (`pages/index.tsx`)
+## Deploy on Vercel
 
-### 🎨 Day 2: Home Page Design
-- [ ] Design homepage layout (hero section, CTA)
-- [ ] Add basic Navbar with links (Customize, Cart)
-- [ ] Style the homepage (boxing aesthetic, clean layout)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### 🧤 Day 3: Glove Customizer
-- [ ] Create `pages/customize.tsx`
-- [ ] Add input options:
-  - Color picker
-  - Glove size dropdown
-  - Optional logo/text field
-- [ ] Preview glove (simple image or SVG-based visual)
-
-### 🛒 Day 4: Cart System
-- [ ] Create `pages/cart.tsx`
-- [ ] Use React Context or Zustand for state
-- [ ] Show cart items, allow remove/edit
-
-### 💳 Day 5: Square API Integration
-- [ ] Set up Square sandbox account + credentials
-- [ ] Implement Square Web Payments SDK
-- [ ] Add secure checkout route + payment handler
-
-### 🧪 Day 6: Testing & Polish
-- [ ] Test all key flows (customize → cart → checkout)
-- [ ] Validate form inputs
-- [ ] Improve mobile responsiveness
-
-### 🎬 Day 7: Deploy & Demo
-- [ ] Deploy to Vercel
-- [ ] Add live demo link to this README
-- [ ] Polish the design & prep for demo presentation
-
----
-
-## 🔮 Future Features (Post-MVP)
-
-- 3D glove preview with real-time updates
-- User authentication and saved designs
-- Admin dashboard for orders
-- AI-generated glove designs (wild idea)
-
----
-
-## 🧠 Author
-
-**Dylan Lafferty** – Full-Stack Developer & Idea Machine  
-👊 Built with code, caffeine, and the will to win
-
----
-
-## 📍 Live Demo (coming soon…)
-
-Stay tuned for the first public launch of KO Glove Studio!
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
