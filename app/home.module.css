@@ -8,10 +8,10 @@
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh; 
+  height: 100vh;
   width: 100%;
   overflow: hidden;
-  padding-top: 6rem; 
+  padding-top: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,8 +59,13 @@
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 /* About Section */
@@ -132,4 +137,61 @@
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: var(--gold);
+}
+
+/* Split Layout Section */
+.splitSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 6rem 3rem;
+  background-color: var(--cream);
+  color: var(--black);
+}
+
+.leftPane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.leftPane h2 {
+  font-size: 2rem;
+  color: var(--red);
+}
+
+.leftPane p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.rightPane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Nested inside rightPane */
+.featureGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: var(--red);
+  color: var(--cream);
+  padding: 1.25rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: var(--gold);
+  margin-bottom: 0.5rem;
 }
