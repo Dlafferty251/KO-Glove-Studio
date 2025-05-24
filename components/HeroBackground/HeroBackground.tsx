@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import styles from './HeroBackground.module.css';
+import { useEffect, useState } from "react";
+import styles from "./HeroBackground.module.css";
 
 const gifs = [
-  '../../images/gifs/floydGif.gif',
-  '../../images/gifs/Knockout.gif',
-  '../../images/gifs/muhammad.webp',
-  '../../images/gifs/oldschool.gif',
-  '../../images/gifs/tyson.gif',
+  "../../images/gifs/floydGif.gif",
+  "../../images/gifs/Knockout.gif",
+  "../../images/gifs/muhammad.webp",
+  "../../images/gifs/oldschool.gif",
+  "../../images/gifs/tyson.gif",
 ];
 
 export default function HeroBackground() {
@@ -16,7 +16,7 @@ export default function HeroBackground() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex(prev => (prev + 1) % gifs.length);
+      setIndex((prev) => (prev + 1) % gifs.length);
     }, 4000); // every 4 seconds
 
     return () => clearInterval(interval);

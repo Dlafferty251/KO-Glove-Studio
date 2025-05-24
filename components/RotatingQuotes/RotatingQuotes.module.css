@@ -1,0 +1,34 @@
+.quoteBox {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  padding: 1rem 2rem;
+  background: rgba(250, 243, 224, 0.05);
+  border-left: 4px solid var(--gold);
+  color: var(--gold);
+  font-style: italic;
+  transition: all 0.5s ease-in-out;
+  animation: fadeIn 0.5s ease;
+}
+
+.text {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  display: block;
+  text-align: right;
+  font-size: 1rem;
+  color: var(--cream);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
