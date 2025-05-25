@@ -1,15 +1,29 @@
-'use client';
-import React, { useState } from 'react';
-import styles from '../GloveCustomizeUI.module.css';
+"use client";
+import React, { useState } from "react";
+import styles from "../GloveCustomizeUI.module.css";
 
-const presetColors = ['#ff0000', '#000000', '#ffffff', '#007bff', '#00c851', '#ffbb33', '#ff4444'];
+const presetColors = [
+  "#ff0000",
+  "#000000",
+  "#ffffff",
+  "#007bff",
+  "#00c851",
+  "#ffbb33",
+  "#ff4444",
+];
 
-export default function ColorTab({ color, setColor }: { color: string; setColor: (c: string) => void }) {
+export default function ColorTab({
+  color,
+  setColor,
+}: {
+  color: string;
+  setColor: (c: string) => void;
+}) {
   const [favorites, setFavorites] = useState<string[]>([]);
 
   const toggleFavorite = (hex: string) => {
     setFavorites((prev) =>
-      prev.includes(hex) ? prev.filter((c) => c !== hex) : [...prev, hex]
+      prev.includes(hex) ? prev.filter((c) => c !== hex) : [...prev, hex],
     );
   };
 
@@ -24,7 +38,7 @@ export default function ColorTab({ color, setColor }: { color: string; setColor:
             className={styles.colorSwatch}
             style={{
               backgroundColor: preset,
-              border: preset === color ? '3px solid #000' : '1px solid #aaa',
+              border: preset === color ? "3px solid #000" : "1px solid #aaa",
             }}
             title={preset}
           />
@@ -43,7 +57,7 @@ export default function ColorTab({ color, setColor }: { color: string; setColor:
 
       <div className={styles.favoriteButtonWrapper}>
         <button onClick={() => toggleFavorite(color)}>
-          {favorites.includes(color) ? '★ Remove Favorite' : '☆ Save Favorite'}
+          {favorites.includes(color) ? "★ Remove Favorite" : "☆ Save Favorite"}
         </button>
       </div>
 
@@ -58,7 +72,7 @@ export default function ColorTab({ color, setColor }: { color: string; setColor:
                 className={styles.colorSwatch}
                 style={{
                   backgroundColor: fav,
-                  border: fav === color ? '3px solid #000' : '1px solid #aaa',
+                  border: fav === color ? "3px solid #000" : "1px solid #aaa",
                 }}
                 title={fav}
               />

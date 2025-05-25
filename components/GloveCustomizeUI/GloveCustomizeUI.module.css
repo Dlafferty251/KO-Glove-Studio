@@ -78,9 +78,33 @@
   margin-top: 0.5rem;
 }
 
+/* 🆕 Decal item wrapper */
+.decalItem {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.decalItem:hover {
+  transform: scale(1.05);
+}
+
 .decalImage {
   width: 50px;
   height: 50px;
-  cursor: pointer;
-  border-radius: 4px;
-} 
+  object-fit: contain;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.selected .decalImage {
+  border-color: #ffc107;
+  box-shadow: 0 0 12px #ffc107;
+}
+
+.decalLabel {
+  font-size: 0.8rem;
+  color: #333;
+  margin-top: 4px;
+}
