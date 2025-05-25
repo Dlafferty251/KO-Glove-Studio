@@ -53,8 +53,57 @@
 - 📦 Product stock/inventory management for physical inventory
 
 ---
-
 ## 🧪 Developer Notes
+=======
+## 🗺️ Roadmap (1-Week Sprint)
+
+### 🔥 Day 1: Project Kickoff
+
+- [x] Create GitHub repo: `ko-glove-studio`
+- [x] Set up Next.js + TypeScript project
+- [x] Install base dependencies
+- [x] Configure CSS Modules or SCSS
+- [x] Create a basic landing page (`pages/index.tsx`)
+
+### 🎨 Day 2: Home Page Design
+
+- [ ] Design homepage layout (hero section, CTA)
+- [ ] Add basic Navbar with links (Customize, Cart)
+- [ ] Style the homepage (boxing aesthetic, clean layout)
+
+### 🧤 Day 3: Glove Customizer
+
+- [ ] Create `pages/customize.tsx`
+- [ ] Add input options:
+  - Color picker
+  - Glove size dropdown
+  - Optional logo/text field
+- [ ] Preview glove (simple image or SVG-based visual)
+
+### 🛒 Day 4: Cart System
+
+- [ ] Create `pages/cart.tsx`
+- [ ] Use React Context or Zustand for state
+- [ ] Show cart items, allow remove/edit
+
+### 💳 Day 5: Square API Integration
+
+- [ ] Set up Square sandbox account + credentials
+- [ ] Implement Square Web Payments SDK
+- [ ] Add secure checkout route + payment handler
+
+### 🧪 Day 6: Testing & Polish
+
+- [ ] Test all key flows (customize → cart → checkout)
+- [ ] Validate form inputs
+- [ ] Improve mobile responsiveness
+
+### 🎬 Day 7: Deploy & Demo
+
+- [ ] Deploy to Vercel
+- [ ] Add live demo link to this README
+- [ ] Polish the design & prep for demo presentation
+
 
 - Fixed hydration/render bugs with React 18 + R3F
 - Created tabbed layout system for customization features

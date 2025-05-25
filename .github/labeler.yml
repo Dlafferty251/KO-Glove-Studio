@@ -1,0 +1,9 @@
+# Example configuration for the labeler action
+# Add labels to pull requests based on changed files
+labels:
+  documentation:
+    - "**/*.md"
+  frontend:
+    - "frontend/**"
+  backend:
+    - "backend/**"
