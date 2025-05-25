@@ -1,12 +1,20 @@
-'use client';
-import { useRef, useEffect } from 'react';
-import { useLoader, useFrame } from '@react-three/fiber';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { Group, MeshStandardMaterial, TextureLoader, Mesh } from 'three';
+"use client";
+import { useRef, useEffect } from "react";
+import { useLoader, useFrame } from "@react-three/fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { Group, MeshStandardMaterial, TextureLoader, Mesh } from "three";
 
-export default function GloveModel({ color, text, decal }: { color: string; text: string; decal: string }) {
+export default function GloveModel({
+  color,
+  text,
+  decal,
+}: {
+  color: string;
+  text: string;
+  decal: string;
+}) {
   const group = useRef<Group>(null);
-  const gltf = useLoader(GLTFLoader, '/models/boxing_gloves.glb');
+  const gltf = useLoader(GLTFLoader, "/models/boxing_gloves.glb");
   const texture = decal ? useLoader(TextureLoader, decal) : null;
 
   useFrame(() => {
