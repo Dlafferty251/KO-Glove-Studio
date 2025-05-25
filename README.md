@@ -1,91 +1,76 @@
 # 🥊 KO Glove Studio
 
-**KO Glove Studio** is a slick web app that lets users design their own custom boxing gloves and purchase them using a smooth checkout flow powered by the Square Payment API.
-
-Perfect for fighters, fans, or anyone who wants to throw hands in style — KO Glove Studio puts the design power right in your corner.
+**KO Glove Studio** is a fully interactive glove customization and purchasing experience. Designed to let users create personalized boxing gloves with their own color schemes, decals, and names — then bring them to life with a direct-to-checkout flow.
 
 ---
 
-## 🚀 Features
+## ✅ Features Implemented
 
-- 🎨 Interactive glove customization (color, size, logo)
-- 🛒 Cart system to manage custom orders
-- 💳 Seamless payment flow using Square API
-- ⚡ Built with React, Next.js, and TypeScript
-- 📱 Mobile-responsive and deployment-ready
+### 🎨 Glove Customization
+- Interactive 3D glove model using `@react-three/fiber` and `@react-three/drei`
+- Color picker UI to change the base glove color
+- Decal support:
+  - Upload custom decals (PNG, JPG, WebP)
+  - Select from preloaded options
+- Hover effects & animations for decal previews
+- Real-time 3D preview updates
 
----
+### 👤 User Personalization
+- User-specific glove designs stored in the database
+- Designs include:
+  - Base color
+  - Uploaded/system decals
+  - Decal placement
+  - Optional glove name/title
 
-## 🛠️ Tech Stack
+### 💽 Backend + Database (Prisma + PostgreSQL)
+- `User`, `GloveDesign`, and `Decal` models with full relations
+- Stores multiple designs per user
+- Plans to support:
+  - Multiple decals per glove
+  - Full-wrap themes
+  - MMA gloves
 
-- **Frontend:** React + Next.js + TypeScript
-- **Styling:** CSS Modules (or SCSS)
-- **State Management:** React Context (or Zustand if scaling)
-- **Payments:** [Square Web Payments SDK](https://developer.squareup.com/docs/web-payments/overview)
-- **Deployment:** Vercel
+### 🛒 Square API Integration
+- Integrated Square payment for purchasing custom gloves
+- Secure and seamless payment flow
+- Hooking up user’s design directly to checkout session
 
----
-
-## 🗺️ Roadmap (1-Week Sprint)
-
-### 🔥 Day 1: Project Kickoff
-- [x] Create GitHub repo: `ko-glove-studio`
-- [x] Set up Next.js + TypeScript project
-- [x] Install base dependencies
-- [x] Configure CSS Modules or SCSS
-- [x] Create a basic landing page (`pages/index.tsx`)
-
-### 🎨 Day 2: Home Page Design
-- [ ] Design homepage layout (hero section, CTA)
-- [ ] Add basic Navbar with links (Customize, Cart)
-- [ ] Style the homepage (boxing aesthetic, clean layout)
-
-### 🧤 Day 3: Glove Customizer
-- [ ] Create `pages/customize.tsx`
-- [ ] Add input options:
-  - Color picker
-  - Glove size dropdown
-  - Optional logo/text field
-- [ ] Preview glove (simple image or SVG-based visual)
-
-### 🛒 Day 4: Cart System
-- [ ] Create `pages/cart.tsx`
-- [ ] Use React Context or Zustand for state
-- [ ] Show cart items, allow remove/edit
-
-### 💳 Day 5: Square API Integration
-- [ ] Set up Square sandbox account + credentials
-- [ ] Implement Square Web Payments SDK
-- [ ] Add secure checkout route + payment handler
-
-### 🧪 Day 6: Testing & Polish
-- [ ] Test all key flows (customize → cart → checkout)
-- [ ] Validate form inputs
-- [ ] Improve mobile responsiveness
-
-### 🎬 Day 7: Deploy & Demo
-- [ ] Deploy to Vercel
-- [ ] Add live demo link to this README
-- [ ] Polish the design & prep for demo presentation
+### 🌐 Deployment
+- Frontend: **Next.js 15 + React**
+- Database: **PostgreSQL via Prisma**
+- Hosted on **Vercel** with CI/CD pipeline
 
 ---
 
-## 🔮 Future Features (Post-MVP)
+## 🛠 In Progress / Up Next
 
-- 3D glove preview with real-time updates
-- User authentication and saved designs
-- Admin dashboard for orders
-- AI-generated glove designs (wild idea)
-
----
-
-## 🧠 Author
-
-**Dylan Lafferty** – Full-Stack Developer & Idea Machine  
-👊 Built with code, caffeine, and the will to win
+- 🔁 Rotate / scale / position decals (drag-and-drop tools)
+- 🖼 Bump/normal map support for texture realism
+- 🎨 Custom decal packs and full-glove wrap themes
+- 👤 User profiles with saved glove collections
+- 🔗 Shareable preview links (render-based)
+- 📦 Product stock/inventory management for physical inventory
 
 ---
 
-## 📍 Live Demo (coming soon…)
+## 🧪 Developer Notes
 
-Stay tuned for the first public launch of KO Glove Studio!
+- Fixed hydration/render bugs with React 18 + R3F
+- Created tabbed layout system for customization features
+- Resolved image loading issues (e.g., `.webp` not found)
+- No Tailwind — all styles built in **custom CSS**
+- Accessibility features being added (keyboard tab support)
+
+---
+
+## 🚀 Live Demo
+**Coming soon** – stay tuned for the Vercel live deployment link.
+
+---
+
+## 👥 Team
+- **Lead Developer / Full-Stack Engineer:** Dylan Lafferty
+
+---
+
