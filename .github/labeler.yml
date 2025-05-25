@@ -2,8 +2,8 @@
 # Add labels to pull requests based on changed files
 labels:
   documentation:
-    - '**/*.md'
+    - "**/*.md"
   frontend:
-    - 'frontend/**'
+    - "frontend/**"
   backend:
-    - 'backend/**'
+    - "backend/**"

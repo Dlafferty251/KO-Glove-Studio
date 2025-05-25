@@ -141,12 +141,27 @@
 
 /* Split Layout Section */
 .splitSection {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   padding: 6rem 3rem;
   background-color: var(--cream);
   color: var(--black);
+}
+
+.splitSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: var(--red);
+  transform: translateX(-1px);
+  z-index: 0;
 }
 
 .leftPane {
@@ -194,4 +209,18 @@
 .card h3 {
   color: var(--gold);
   margin-bottom: 0.5rem;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px var(--gold);
+  transform: translateY(-4px);
+  transition: all 0.2s ease;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.25rem;
+  color: var(--red);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }

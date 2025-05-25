@@ -6,10 +6,10 @@ import { ReactNode } from "react";
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <header>
+      <body>
         <Header />
-      </header>
-      <body>{children}</body>
+        {children}
+      </body>
     </html>
   );
 }
