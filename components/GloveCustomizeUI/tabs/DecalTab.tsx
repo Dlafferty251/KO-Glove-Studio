@@ -3,10 +3,13 @@ import React, { useState, useRef } from "react";
 import styles from "../GloveCustomizeUI.module.css";
 
 const presetDecals = [
-  "/images//boxinggloves.png",
+  "/images/boxinggloves.png",
   "/images/fire.webp",
   "/images/reaper.webp",
 ];
+
+const isValidImageUrl = (url: string) =>
+  /^data:image\//.test(url) || /^https?:\/\//.test(url) || /^\/images\//.test(url);
 
 export default function DecalTab({
   decal,
@@ -22,22 +25,28 @@ export default function DecalTab({
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleAddCustom = () => {
-    if (customUrl.trim()) {
-      setDecal(customUrl.trim());
-      addCustomDecal(customUrl.trim());
+    const url = customUrl.trim();
+    if (isValidImageUrl(url)) {
+      setDecal(url);
+      addCustomDecal(url);
       setCustomUrl("");
+    } else {
+      alert("Invalid image URL.");
     }
   };
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
+
     const reader = new FileReader();
     reader.onload = () => {
-      if (typeof reader.result === "string") {
+      if (typeof reader.result === "string" && isValidImageUrl(reader.result)) {
         setDecal(reader.result);
         addCustomDecal(reader.result);
         setUploadedDecals((prev) => [...prev, reader.result as string]);
+      } else {
+        alert("Invalid image format.");
       }
     };
     reader.readAsDataURL(file);
@@ -48,12 +57,10 @@ export default function DecalTab({
   return (
     <div>
       <h3>Choose or Upload a Decal</h3>
-
-      {/* Preset + Uploaded Decals */}
       <h4 className={styles.decalHeader}>Available Decals</h4>
       <div className={styles.decalGrid}>
         {allDecals.map((img, index) => {
-          const fileName = img.split("/").pop()?.split(".")[0]; // extract name like 'fire'
+          const fileName = img.split("/").pop()?.split(".")[0];
           const isSelected = decal === img;
 
           return (
@@ -69,7 +76,6 @@ export default function DecalTab({
         })}
       </div>
 
-      {/* Upload Option */}
       <div style={{ marginTop: "1rem" }}>
         <input
           type="text"
@@ -90,7 +96,6 @@ export default function DecalTab({
         </div>
       </div>
 
-      {/* Preview */}
       {decal && (
         <div style={{ marginTop: "1rem" }}>
           <p>Current Decal:</p>
