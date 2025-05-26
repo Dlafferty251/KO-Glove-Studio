@@ -1,0 +1,110 @@
+.wrapper {
+  background: #f4f4f4;
+  padding: 1rem;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  margin-top: 64px;
+}
+
+.tabNav {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #f4f4f4;
+  padding-top: 0.5rem;
+}
+
+.activeTab {
+  padding: 0.5rem 1rem;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inactiveTab {
+  padding: 0.5rem 1rem;
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.colorGrid {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.colorSwatch {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.customColorLabel {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.colorInput {
+  margin-left: 1rem;
+}
+
+.favoriteButtonWrapper {
+  margin-top: 1rem;
+}
+
+.favoritesWrapper {
+  margin-top: 1rem;
+}
+
+.decalHeader {
+  margin-top: 1rem;
+}
+
+.decalGrid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* 🆕 Decal item wrapper */
+.decalItem {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.decalItem:hover {
+  transform: scale(1.05);
+}
+
+.decalImage {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.selected .decalImage {
+  border-color: #ffc107;
+  box-shadow: 0 0 12px #ffc107;
+}
+
+.decalLabel {
+  font-size: 0.8rem;
+  color: #333;
+  margin-top: 4px;
+}
