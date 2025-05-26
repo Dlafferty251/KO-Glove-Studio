@@ -1,15 +1,14 @@
+
+// DecalTab.tsx
 "use client";
 import React, { useState, useRef } from "react";
 import styles from "../GloveCustomizeUI.module.css";
 
 const presetDecals = [
   "/images/boxinggloves.png",
-  "/images/fire.webp",
+  "/images/fire.png",
   "/images/reaper.webp",
 ];
-
-const isValidImageUrl = (url: string) =>
-  /^data:image\//.test(url) || /^https?:\/\//.test(url) || /^\/images\//.test(url);
 
 export default function DecalTab({
   decal,
@@ -25,28 +24,22 @@ export default function DecalTab({
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleAddCustom = () => {
-    const url = customUrl.trim();
-    if (isValidImageUrl(url)) {
-      setDecal(url);
-      addCustomDecal(url);
+    if (customUrl.trim()) {
+      setDecal(customUrl.trim());
+      addCustomDecal(customUrl.trim());
       setCustomUrl("");
-    } else {
-      alert("Invalid image URL.");
     }
   };
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
-
     const reader = new FileReader();
     reader.onload = () => {
-      if (typeof reader.result === "string" && isValidImageUrl(reader.result)) {
+      if (typeof reader.result === "string") {
         setDecal(reader.result);
         addCustomDecal(reader.result);
         setUploadedDecals((prev) => [...prev, reader.result as string]);
-      } else {
-        alert("Invalid image format.");
       }
     };
     reader.readAsDataURL(file);
